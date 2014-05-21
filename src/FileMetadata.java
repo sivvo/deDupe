@@ -6,7 +6,7 @@ public class FileMetadata {
     public Long size;
     public Integer filehash;
     public String absoluteFilePath;
-    public void FileMetadata(String filename, String absoluteFilePath, Long size, Integer hash){
+    public FileMetadata(String filename, String absoluteFilePath, Long size, Integer hash){
         this.filename = filename;
         this.size = size;
         this.absoluteFilePath = absoluteFilePath;

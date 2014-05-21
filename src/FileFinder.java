@@ -35,7 +35,8 @@ public class FileFinder {
 
         File folder = new File(this.DIRNAME);
         File[] listOfFiles = folder.listFiles();
-        ArrayList<FileMetadata> listOfFileMetadata  new FileMetadata();
+
+        ArrayList<FileMetadata> listOfFileMetadata = new ArrayList<FileMetadata>();
         for (int i = 0; i < listOfFiles.length; i++)
         {
 
@@ -45,13 +46,16 @@ public class FileFinder {
                 size  = listOfFiles[i].length();
                 hash  = listOfFiles[i].hashCode();
                 absoluteFilePath = listOfFiles[i].getAbsolutePath();
-                listOfFileMetadata.add(files, size, hash, absoluteFilePath);
+                FileMetadata a_file = new FileMetadata(files, absoluteFilePath, size, hash);
+               listOfFileMetadata.add(a_file);
 
                 //Files.asByteSource()
                 System.out.println(files);
-                System.out.println(size);
+                System.out.println(absoluteFilePath);
+                System.out.println(hash);
             }
         }
+
     }
 
 }
